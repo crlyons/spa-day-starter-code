@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" th:action="${/user}">
+    <label>
+        User Name
+        <input type="text" name="userName" th:value="${userName}">
+    </label>
+    <label>
+        Email
+        <input type="email" name="email" th:value="${email}">
+    </label>
+    <label>
+        Password
+        <input type="text" name="password">
+    </label>
+    <label>
+        Verify Password
+        <input type="text" name="verifyPassword">
+    </label>
+    <input type="submit" value="Submit">
+    <p th:text="${error}"></p>
+</form>
+
+</body>
+</html>
