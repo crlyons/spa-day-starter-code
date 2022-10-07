@@ -18,6 +18,10 @@ public class UserController {
         model.addAttribute("verify", verify);
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
+
+        if(verify.equals(user.getPassword())){
+            return "user/index.html";
+        }
         return "";
 
     }
